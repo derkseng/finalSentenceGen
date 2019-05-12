@@ -11,12 +11,6 @@ input_text = []
 urlNum = []
 count = 15000
 
-# cleans out the set of symbols and punctuation which I could have done in the remove_tag function but... time and know how?
-def clean_word(word):
-    for ch in ".;,[]\t\n°()\"'“”":
-        word = word.replace(ch, "")
-    return word.lower()
-
 url = 'http://lacity.granicus.com/TranscriptViewer.php?view_id=130&clip_id='
 while (count < 17000):     
     count = count + 1
@@ -26,6 +20,11 @@ while (count < 17000):
 
 readWords = requests.get(urlNum[0])
 dirtyText = readWords.text
+# cleans out the set of symbols and punctuation which I could have done in the remove_tag function but... time and know how?
+def clean_word(word):
+    for ch in ".;,[]\t\n°()\"'“”":
+        word = word.replace(ch, "")
+    return word.lower()
 
 # a little regex to strip out the tags and css
 def remove_tags(tag):
