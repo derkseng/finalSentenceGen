@@ -31,9 +31,9 @@ def clean_word(word):
 # a little regex to strip out the tags and css
 def remove_tags(tag):
     p = re.compile(r'<.*?>+' '|{.*?}')
-    gem = p.sub('', tag)
+    tag = p.sub('', tag)
     
-    return gem
+    return tag
         
 input_text = remove_tags(dirtyText)
 
