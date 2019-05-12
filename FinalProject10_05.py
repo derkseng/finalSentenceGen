@@ -1,3 +1,5 @@
+#Gerry Derksen
+# Final Project IS 453
 from collections import Counter
 import random
 import requests
@@ -42,7 +44,7 @@ with open('assets/DictionaryNW.txt', mode='r') as infile:
     reader = csv.reader(infile)
     myWords = {k:v for k, v in reader}
 
-# words are the relation between a word and the next word
+# words are the relation between a word and the next word and build tuples of words to put in list
 prev_word = None
 pairs = []
 for word in input_text.split():
@@ -62,7 +64,7 @@ for word in input_text.split():
 
 word_count = len(pairs) + 1
 
-# count the frequency a word appears and build a tuple of words based on the probablity of the previous word and the
+# count the frequency a word appears  based on the probablity of the previous word and the
 # next word appearing in the original text.
 count = Counter(pairs)
 network = {}
