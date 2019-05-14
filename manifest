@@ -1,0 +1,10 @@
+Import the following modules
+import Counter
+import random
+import requests
+import re
+import nltk
+import csv
+
+Assests folder should be in the same directory as the main python file. DictionaryNW.txt should be located inside the assests folder.
+A copy of the original text can be found at http://lacity.granicus.com/TranscriptViewer.php?view_id=130&clip_id=15000
